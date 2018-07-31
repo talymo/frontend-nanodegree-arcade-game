@@ -1,3 +1,96 @@
 body {
     text-align: center;
+    background-color: #53555A;
+    color: #FB9592;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 20px;
+}
+
+.flash {
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 1s infinite;
+}
+
+    #char-select {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto;
+        height: 100%;
+        width: 100vw;
+        background-color: #F6E5D7;
+    }
+
+        #char-select p {
+            max-width: 700px;
+            padding: 0 20px;
+            margin: 0 auto;
+            color: #53555A;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .player {
+            border: 5px solid #F8D9CC;
+            cursor: pointer;
+            height: 150px;
+            width: 130px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .player.active-player {
+            border: 5px solid #FB9592;
+        }
+
+        .player:focus,
+        .player:active {
+            outline: 0;
+        }
+
+            .player img {
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                margin: auto;
+                width: 101px;
+            }
+
+        .player:not(.active-player):hover > img {
+            animation: bounce 250ms infinite alternate;
+            -webkit-animation: bounce 250ms infinite alternate;
+        }
+
+        #start {
+            display: block;
+            margin: 30px auto;
+            background-color: #FB9592;
+            border: 0;
+            padding: 10px 20px;
+            color: #53555A;
+            font-size: 22px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        #start:hover {
+            background-color: #53555A;
+            color: #FB9592;
+        }
+
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
 }

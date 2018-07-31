@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/resources.js"></script>
 </head>
 <body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+
+    <div id="feedback"></div>
 
     <div id="char-select">
+        <h1>Lake Run!</h1>
+        <p>Welcome to Lake Run! This game is designed to test your reaction skills by your ability to navigate a character across four lanes of terrain heavily populated by racing ladybugs. You have to be quick on your toes and avoid a ladybug collision otherwise you will be knocked back to the beginning and lose 10 points! Make it to the lake and you get 10 points. Collect the random extras that pop up and get bonus points.</p>
+        <p>Reach 500 points and you will level up and unlock a secret surprise!</p>
         <h2>Pick a character:</h2>
-        <button onclick="player.selectPlayer('images/char-boy.png');">
+        <button class="player active-player" onclick="player.selectPlayer('images/char-boy.png', this);">
             <img src="images/char-boy.png" alt="Boy Character" />
         </button>
-        <button onclick="player.selectPlayer('images/char-cat-girl.png');">
+        <button class="player" onclick="player.selectPlayer('images/char-cat-girl.png', this);">
             <img src="images/char-cat-girl.png" alt="Cat Girl Character" />
         </button>
-        <button onclick="player.selectPlayer('images/char-horn-girl.png');">
+        <button class="player" onclick="player.selectPlayer('images/char-horn-girl.png', this);">
         <img src="images/char-horn-girl.png" alt="Horn Girl Character" />
         </button>
-        <button onclick="player.selectPlayer('images/char-pink-girl.png');">
+        <button class="player" onclick="player.selectPlayer('images/char-pink-girl.png', this);">
             <img src="images/char-pink-girl.png" alt="Pink Girl Character" />
         </button>
-        <button onclick="player.selectPlayer('images/char-princess-girl.png');">
+        <button class="player" onclick="player.selectPlayer('images/char-princess-girl.png', this);">
             <img src="images/char-princess-girl.png" alt="Princess Girl Character" />
         </button>
+
+        <button id="start">
+            START GAME!
+        </button>
+
     </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
 
 </body>
 </html>
