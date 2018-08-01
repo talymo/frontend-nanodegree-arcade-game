@@ -9,7 +9,9 @@
 </head>
 <body>
 
-    <div id="feedback"></div>
+    <div id="feedback">
+        <span id="score">0</span><span> points</span>
+    </div>
 
     <div id="char-select">
         <h1>Lake Run!</h1>
@@ -31,6 +33,13 @@
         <button class="player" onclick="player.selectPlayer('images/char-princess-girl.png', this);">
             <img src="images/char-princess-girl.png" alt="Princess Girl Character" />
         </button>
+
+        <br />
+
+        <label for="saveCharacter">
+            <input id="saveChar" type="checkbox" value="saveCharacter" name="saveCharacter" />
+            Save Choice Until Tomorrow?
+        </label>
 
         <button id="start">
             START GAME!
