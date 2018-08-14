@@ -6,10 +6,25 @@ body {
     font-size: 20px;
 }
 
+#timer {
+    display: block;
+    margin-top: 20px;
+}
+
 .flash {
     -webkit-animation: flash linear 1s infinite;
     animation: flash linear 1s infinite;
 }
+
+    #restart {
+        margin-top: 20px;
+        background-color: #F8D9CC;
+        color: #53555A;
+        border: 0;
+        box-shadow: 0;
+        padding: 10px 20px;
+        font-weight: 800;
+    }
 
     #char-select {
         position: absolute;

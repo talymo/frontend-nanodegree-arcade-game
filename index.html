@@ -2,53 +2,76 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
+    <title>Ladybug Dash</title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/resources.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123877670-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123877670-1');
+    </script>
 </head>
 <body>
 
-    <div id="feedback">
-        <span id="score">0</span><span> points</span>
-    </div>
+<div id="feedback">
+    <span id="score">0</span><span> points</span>
+    <span id="lives">3</span><span> lives</span>
+    <span id="timer">05:00</span>
+    <button id="restart">RESTART GAME!</button>
+</div>
 
-    <div id="char-select">
-        <h1>Lake Run!</h1>
-        <p>Welcome to Lake Run! This game is designed to test your reaction skills by your ability to navigate a character across four lanes of terrain heavily populated by racing ladybugs. You have to be quick on your toes and avoid a ladybug collision otherwise you will be knocked back to the beginning and lose 10 points! Make it to the lake and you get 10 points. Collect the random extras that pop up and get bonus points.</p>
-        <p>Reach 500 points and you will level up and unlock a secret surprise!</p>
-        <h2>Pick a character:</h2>
-        <button class="player active-player" onclick="player.selectPlayer('images/char-boy.png', this);">
-            <img src="images/char-boy.png" alt="Boy Character" />
-        </button>
-        <button class="player" onclick="player.selectPlayer('images/char-cat-girl.png', this);">
-            <img src="images/char-cat-girl.png" alt="Cat Girl Character" />
-        </button>
-        <button class="player" onclick="player.selectPlayer('images/char-horn-girl.png', this);">
+<div id="char-select">
+    <h1>Ladybug Dash!</h1>
+    <p>Welcome to Ladybug Dash! This game is designed to test your reaction skills by your ability to navigate a character across four lanes of terrain heavily populated by racing ladybugs. You have to be quick on your toes and avoid a ladybug collision otherwise you will be knocked back to the beginning and lose 10 points! Make it to the lake and you get 10 points. Collect the random extras that pop up and get bonus points.</p>
+    <p>Reach 500 points and you will level up and unlock a secret surprise!</p>
+    <p>Use your arrow keys to move the character from the grass to the water. Make it to the water and you win!</p>
+    <h2>Pick a character:</h2>
+    <button class="player active-player" onclick="player.selectPlayer('images/char-boy.png', this);">
+        <img src="images/char-boy.png" alt="Boy Character" />
+    </button>
+    <button class="player" onclick="player.selectPlayer('images/char-cat-girl.png', this);">
+        <img src="images/char-cat-girl.png" alt="Cat Girl Character" />
+    </button>
+    <button class="player" onclick="player.selectPlayer('images/char-horn-girl.png', this);">
         <img src="images/char-horn-girl.png" alt="Horn Girl Character" />
-        </button>
-        <button class="player" onclick="player.selectPlayer('images/char-pink-girl.png', this);">
-            <img src="images/char-pink-girl.png" alt="Pink Girl Character" />
-        </button>
-        <button class="player" onclick="player.selectPlayer('images/char-princess-girl.png', this);">
-            <img src="images/char-princess-girl.png" alt="Princess Girl Character" />
-        </button>
+    </button>
+    <button class="player" onclick="player.selectPlayer('images/char-pink-girl.png', this);">
+        <img src="images/char-pink-girl.png" alt="Pink Girl Character" />
+    </button>
+    <button class="player" onclick="player.selectPlayer('images/char-princess-girl.png', this);">
+        <img src="images/char-princess-girl.png" alt="Princess Girl Character" />
+    </button>
 
-        <br />
+    <br />
 
-        <label for="saveCharacter">
-            <input id="saveChar" type="checkbox" value="saveCharacter" name="saveCharacter" />
-            Save Choice Until Tomorrow?
-        </label>
+    <label for="saveCharacter">
+        <input id="saveChar" type="checkbox" value="saveCharacter" name="saveCharacter" />
+        Save Choice Until Tomorrow?
+    </label>
 
-        <button id="start">
-            START GAME!
-        </button>
+    <button id="start">
+        START GAME!
+    </button>
 
-    </div>
+</div>
 
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+<p>If you enjoy playing this game, why not buy me a cup of coffee?</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="GF4NR6QHBR9HE">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+<script src="js/app.js"></script>
+<script src="js/engine.js"></script>
 
 </body>
 </html>

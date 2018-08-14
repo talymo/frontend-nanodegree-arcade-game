@@ -79,7 +79,6 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
     }
 
     /* This is called by the update function and loops through all of the
@@ -92,6 +91,9 @@ var Engine = (function(global) {
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
+        });
+        activeBonuses.forEach(function(bonus){
+            bonus.update(dt);
         });
         player.update();
     }
@@ -152,6 +154,9 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
+        activeBonuses.forEach(function(bonus) {
+            bonus.render();
+        });
 
         player.render();
     }
@@ -181,11 +186,11 @@ var Engine = (function(global) {
         'images/gem-blue.png',
         'images/gem-green.png',
         'images/gem-orange.png',
-        'images/heart.png',
-        'images/key.png',
-        'images/rock.png',
-        'images/selector.png',
-        'images/star.png'
+        'images/Heart.png',
+        'images/Key.png',
+        'images/Rock.png',
+        'images/Selector.png',
+        'images/Star.png'
     ]);
     Resources.onReady(init);
 
